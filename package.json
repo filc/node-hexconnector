@@ -1,0 +1,23 @@
+{
+  "name": "node-hexconnector",
+  "version": "0.1.0",
+  "description": "Connector for hexagonal design",
+  "main": "hexconnector.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filc/node-hexconnector.git"
+  },
+  "author": "Peter Ujvari <peter.ujvari.3@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/filc/node-hexconnector/issues"
+  },
+  "homepage": "https://github.com/filc/node-hexconnector#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
