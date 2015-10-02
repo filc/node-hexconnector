@@ -23,16 +23,16 @@ console.log(myValue);
 
 ## Register adapters
 
-### Register a standard package as an adapter
+#### Register a standard package as an adapter
 
 ```
 cn.registerAdapter('myUtil', 'util');
 cn.adapters.myUtil.isBoolean(true);
 ```
 
-### Register an own example adapter
+#### Register an own example adapter
 
-#### Let's see our adapter (own.js)
+Let's see our adapter (own.js)
 
 ```
 var connector;
@@ -50,7 +50,7 @@ module.exports = {
 }
 ```
 
-#### Now, let's see how to use it...
+Now, let's see how to use it...
 
 ```
 cn.registerAdapter('ownAdapter', './own');
