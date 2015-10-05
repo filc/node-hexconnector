@@ -1,6 +1,6 @@
 # node-hexconnector
 
-This package used for storing any values or dependecies that any parts of the application might need.
+This package is used for storing any values or dependecies that any parts of the application might need.
 
 ## Installation
 
