@@ -23,7 +23,7 @@ console.log(myValue);
 
 ## Register adapters
 
-#### Register a simple as an adapter
+#### Register a simple object as an adapter
 
 
 ```
