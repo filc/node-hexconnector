@@ -37,6 +37,16 @@ describe('Hex Connector', function() {
         assert.equal('undefined', typeof cn2.adapters.simple_util);
     });
 
+    it('should register an object as a library', function () {
+        cn.registerAdapter('objLib', {
+            testVar: 'var ok',
+            testFunc: function () { return 'OK'; }
+        });
+
+        assert.equal('var ok', cn.adapters.objLib.testVar);
+        assert.equal('OK', cn.adapters.objLib.testFunc());
+    });
+
   });
 
 describe('_set _get method', function () {

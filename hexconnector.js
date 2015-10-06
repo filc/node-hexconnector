@@ -4,7 +4,11 @@ var HexConnector = function () {
     this.container = {};
 
     this.registerAdapter = function (port, adapter, config) {
-        this.adapters[port] = require(adapter);
+        if (adapter instanceof Object) {
+            this.adapters[port] = adapter;
+        } else {
+            this.adapters[port] = require(adapter);
+        }
 
         if (typeof this.adapters[port].initAdapter === 'function') {
             this.adapters[port].initAdapter(this, config);
