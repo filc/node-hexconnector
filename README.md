@@ -23,7 +23,22 @@ console.log(myValue);
 
 ## Register adapters
 
+#### Register a simple as an adapter
+
+
+```
+cn.registerAdapter('ownLib', {
+    testFunc: function () {
+        console.log('OK');
+    }
+});
+
+cn.adapters.ownLib.testFunc();
+```
+
+
 #### Register a standard package as an adapter
+
 
 ```
 cn.registerAdapter('myUtil', 'util');
@@ -31,6 +46,7 @@ cn.adapters.myUtil.isBoolean(true);
 ```
 
 #### Register an own example adapter
+
 
 Let's see our adapter (own.js)
 
