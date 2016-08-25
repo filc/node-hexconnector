@@ -73,3 +73,11 @@ cn.registerAdapter('ownAdapter', './own');
 var adapterConfig = cn.adapters.ownAdapter.getConfig();
 console.log(adapterConfig);
 ```
+
+... or register and use the adapters with **lazy initialization**...
+
+```
+cn.registerAdapter('ownAdapter', './own', {test_key: 'test value'}, true);
+var adapter = cn.getAdapter('ownAdapter');
+console.log(adapter.getConfig());
+```
