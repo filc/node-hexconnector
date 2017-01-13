@@ -1,6 +1,6 @@
 {
   "name": "node-hexconnector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Connector for hexagonal design",
   "main": "hexconnector.js",
   "scripts": {
