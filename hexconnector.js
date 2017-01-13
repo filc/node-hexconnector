@@ -12,19 +12,19 @@ var HexConnector = function () {
         adapterConfigs[port] = config || {};
 
         if (adapter instanceof Object) {
-            this.adapters[port] = adapter;
+            self.adapters[port] = adapter;
         } else {
             delete require.cache[require.resolve(adapter)]
-            this.adapters[port] = require(adapter);
+            self.adapters[port] = require(adapter);
         }
 
-        if (!withoutInit && typeof this.adapters[port].initAdapter === 'function') {
+        if (!withoutInit && typeof self.adapters[port].initAdapter === 'function') {
             _initAdapter(port);
         }
     };
 
     this.getAdapter = function (port) {
-        var adapter = this.adapters[port];
+        var adapter = self.adapters[port];
 
         if (adapter && !initializedAdapters[port] && typeof adapter.initAdapter === 'function') {
             _initAdapter(port);
@@ -34,15 +34,15 @@ var HexConnector = function () {
     }
 
     this._set = function (k, v) {
-        this.container[k] = v;
+        self.container[k] = v;
     };
 
     this._get = function (k) {
-        return this.container[k];
+        return self.container[k];
     };
 
     function _initAdapter(port) {
-        self.adapters[port].initAdapter(this, adapterConfigs[port]);
+        self.adapters[port].initAdapter(self, adapterConfigs[port]);
         initializedAdapters[port] = true;
     }
 };
